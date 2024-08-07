@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-4">
+      <h3>Filtra las propiedades</h3>
+      <form action="#" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="region_cod" class="form-label">Región</label>
+          <select name="region_cod" id="region_cod" class="form-select">
+            <option value="">Selecciona una región</option>
+            <option value="1">Primera</option>
+            <option value="2">Segunda</option>
+            <option value="3">Tercera</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="comuna" class="form-label">Comuna</label>
+          <select name="comuna_cod" id="comuna_cod" class="form-select">
+            <option value="">Selecciona una comuna</option>
+            <option value="4">Cuatro</option>
+            <option value="5">Cinco</option>
+            <option value="6">Seis</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="palabra" class="form-label">Palabra</label>
+          <input
+            type="text"
+            class="form-control"
+            name="palabra"
+            id="palabra"
+          />
+        </div>
+        <input type="submit" value="Buscar" class="btn btn-success">
+      </form>
+    </div>
+    <div class="col-8">
+
+      <div class="card mt-3">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="col-4">
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
